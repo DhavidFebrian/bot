@@ -1,0 +1,2 @@
+Apakah Anda ingin cek dan claim task? (y/n, default n): Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/bot/yescoin/yescoin.py", line 517, in <module>
