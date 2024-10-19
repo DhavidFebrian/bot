@@ -38,6 +38,8 @@ window_count=1
 # Start a new tmux session with the first bot
 first_bot=$(echo "${!bots[@]}" | awk '{print $1}')
 tmux new-session -d -s bots -n "window_$window_count" "cd ~/bot/$first_bot && ${bots[$first_bot]}"
+tmux select-pane -T "$first_bot"  # Set the pane title to the bot name
+current_pane_count=1
 
 # Loop through the remaining bots
 for bot in "${!bots[@]}"; do
@@ -54,6 +56,7 @@ for bot in "${!bots[@]}"; do
 
     # Open a new tmux pane for each bot
     tmux split-window -t bots: -h "cd ~/bot/$bot && $cmd"
+    tmux select-pane -T "$bot"  # Set the pane title to the bot name
     tmux select-layout tiled  # Organize panes in a tiled layout
     current_pane_count=$((current_pane_count + 1))
   fi
