@@ -1,5 +1,0 @@
-to run : 
-./run.sh
-
-close all pane tmux : 
-tmux kill-session -t bots
