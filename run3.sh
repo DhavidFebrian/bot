@@ -21,9 +21,9 @@ declare -A bots=(
     ["pocketfi"]="python bot.py"
     ["snapster"]="python main.py"
     ["tabizoo"]="python bot.py"
-    ["tomarket"]="python app.py"
-    ["tomarket1"]="python app.py"
-    ["tomarket2"]="python app.py"
+    ["tomarket"]="node index.js"
+    ["tomarket1"]="node index.js"
+    ["tomarket2"]="node index.js"
     ["nanonfish"]="python ikan.py"
     ["yescoin"]="python yescoin.py"
 )
